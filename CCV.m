@@ -197,13 +197,11 @@ end
        
 
     image_index=image_index + 1;
-    if (image_index == 12 )
-        break; 
-    end
+   
  end
 
 
-%Finding the 5 minimum values in the Array
+%Finding the 5 minimum values in the Arra y
 
 retreval = abs(retval_diff);
 max_Index = zeros(1,5);
