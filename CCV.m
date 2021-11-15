@@ -203,12 +203,12 @@ while hasdata(ds)
 end
 
 
-%Finding the 5 minimum values in the Arra y
+%Finding the 3 minimum values in the Arra y
 
 retreval = abs(retval_diff);
-max_Index = zeros(1,5);
+max_Index = zeros(1,3);
 
-for j=1:5
+for j=1:3
     [M,I] = min(retval_diff);
     retval_diff(1,I)=1000000;
     max_Index(1,j) = I;
@@ -217,12 +217,10 @@ end
 img1=readimage(ds,max_Index(1,1));
 img2=readimage(ds,max_Index(1,2));
 img3=readimage(ds,max_Index(1,3));
-img4=readimage(ds,max_Index(1,4));
-img5=readimage(ds,max_Index(1,5));
 
-subplot(1,6,1), imshow(rgb_image)
-subplot(1,6,2), imshow(img1)
-subplot(1,6,3), imshow(img2)
-subplot(1,6,4), imshow(img3)
-subplot(1,6,5), imshow(img4)
-subplot(1,6,6), imshow(img5)
+
+subplot(1,4,1), imshow(rgb_image)
+subplot(1,4,2), imshow(img1)
+subplot(1,4,3), imshow(img2)
+subplot(1,4,4), imshow(img3)
+
