@@ -7,11 +7,11 @@ thresh= 500;
 location = 'C:\Users\microsoft\Desktop\image_DBase';
 
 %Enetr the path for an image that you wont to find the similar to it
-rgbImage = imread('C:\Users\microsoft\Desktop\image2.jpg');
+rgb_image = imread('C:\Users\microsoft\Desktop\316.jpg');
 
-redChannel = rgbImage(:,:,1); % Red channel
-greenChannel = rgbImage(:,:,2); % Green channel
-blueChannel = rgbImage(:,:,3); % Blue channel
+redChannel = rgb_image(:,:,1); % Red channel
+greenChannel = rgb_image(:,:,2); % Green channel
+blueChannel = rgb_image(:,:,3); % Blue channel
 
 %bluring the image
 Rblur = imgaussfilt(redChannel,sigma);
@@ -220,7 +220,7 @@ img3=readimage(ds,max_Index(1,3));
 img4=readimage(ds,max_Index(1,4));
 img5=readimage(ds,max_Index(1,5));
 
-subplot(1,6,1), imshow(rgbImage)
+subplot(1,6,1), imshow(rgb_image)
 subplot(1,6,2), imshow(img1)
 subplot(1,6,3), imshow(img2)
 subplot(1,6,4), imshow(img3)
