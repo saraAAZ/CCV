@@ -7,7 +7,7 @@ thresh= 500;
 location = 'C:\Users\microsoft\Desktop\image_DBase';
 
 %Enetr the path for an image that you wont to find the similar to it
-rgb_image = imread('C:\Users\microsoft\Desktop\316.jpg');
+rgb_image = imread('C:\Users\microsoft\Desktop\16.jpg');
 
 redChannel = rgb_image(:,:,1); % Red channel
 greenChannel = rgb_image(:,:,2); % Green channel
@@ -64,13 +64,13 @@ for i=1:n
     for j=1:m
         index = connected(i,j);
         t1(2,index) = t1(2,index) + 1;
-        t1(1,index) = rgbImage(i,j);
+        t1(1,index) = rgb_image(i,j);
     end
 end
 
 %create second table that contain alpha and beta values
 
-levels = max(max(max(rgbImage)));
+levels = max(max(max(rgb_image)));
 
 [s , r] = size(t1);
 retval = zeros(2 ,levels);
@@ -223,4 +223,5 @@ subplot(1,4,1), imshow(rgb_image)
 subplot(1,4,2), imshow(img1)
 subplot(1,4,3), imshow(img2)
 subplot(1,4,4), imshow(img3)
+
 
